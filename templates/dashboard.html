@@ -1,0 +1,82 @@
+
+{% extends "dashboard_base.html" %}
+{% block dashboard_content %}
+<div class="content">
+    <div class="container-fluid">
+              <div class="row">
+                      <div class="col-md-6">
+                      <div class="card ">
+                          <div class="card-header ">
+                              <h4 class="card-title" style="text-align:center; align-content:center;">Average Daily Calorie Intake</h4>
+                              <p class="card-category"></p>
+                          </div>
+                          <div class="card-body ">
+                                    <div class="panel" style="align-items:center;">
+
+                            <img src="{{url_for('static', filename='graph-1-calorie.jpg')}}" style="    width: 500px; height: 400px;align-content: center;align-items: center;margin-left: 50px;" />
+
+                                  </div>
+
+                                  </div>
+
+                                </div>
+                          </div>
+                  <div class="col-md-6" >
+                      <div class="card ">
+                          <div class="card-header " style="text-align:center;">
+                              <h4 class="card-title">Portion of Nutrients Consumed Today</h4>
+                              <p class="card-category"></p>
+                          </div>
+                          <div class="card-body " style="  text-align: center;">
+                              <div class="panel" style="align-items:center;">
+                            <img src="{{url_for('static', filename='grph-2-daily intake.jpg')}}" style="    width: 550px; height: 400px;align-content: center;align-items: center;margin-left: 30px;" />
+                            <div class="panel" style="align-items:center;">
+                                </div></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                  <div class="card ">
+                      <div class="card-header ">
+                          <h4 class="card-title" style="text-align:center; align-content:center;">Another graph</h4>
+                          <p class="card-category"></p>
+                      </div>
+                      <div class="card-body ">
+                                <div class="panel" style="align-items:center;">
+
+                        <img src="{{url_for('static', filename='graph-1-calorie.jpg')}}" style="    width: 500px; height: 400px;align-content: center;align-items: center;margin-left: 50px;" />
+
+                              </div>
+
+                              </div>
+
+                            </div>
+                      </div>
+              <div class="col-md-6" >
+                  <div class="card ">
+                      <div class="card-header " style="text-align:center;">
+                          <h4 class="card-title">Another Graph</h4>
+                          <p class="card-category"></p>
+                      </div>
+                      <div class="card-body " style="  text-align: center;">
+                          <div class="panel" style="align-items:center;">
+                        <img src="{{url_for('static', filename='grph-2-daily intake.jpg')}}" style="    width: 550px; height: 400px;align-content: center;align-items: center;margin-left: 30px;" />
+                        <div class="panel" style="align-items:center;">
+                            </div></div>
+                      </div>
+                  </div>
+              </div>
+
+  </div>
+</div>
+{% endblock dashboard_content %}
+{% block scripts %}
+
+<script src="{{ url_for('static',filename='jquery.3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static',filename='popper.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap-switch.js') }}"></script>
+<script src="{{ url_for('static',filename='chartist.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap-notify.js') }}"></script>
+<script src="{{ url_for('static',filename='light-bootstrap-dashboard.js') }}"></script>
+{% endblock scripts %}

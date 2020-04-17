@@ -1,0 +1,81 @@
+{% extends "dashboard_base.html" %}
+{% block dashboard_content %}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card ">
+                    <div class="card-header ">
+                        <h4 class="card-title" style="text-align:center; align-content:center;">Take Note of
+                            the Positive Progress</h4>
+                        <p class="card-category">
+
+
+                        </p>
+
+                    </div>
+                    <div class="card-body ">
+                        <div class="panel" style="align-items:center;">
+
+                            <textarea class="form-control form-control-lg mb-3" rows="10"
+                                placeholder="Happy Things Here" style="height:300px;"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card ">
+                    <div class="card-header " style="text-align:center;">
+                        <h4 class="card-title">Portion of Nutrients Consumed Today</h4>
+                        <p class="card-category"></p>
+                    </div>
+                    <div class="card-body " style="  text-align: center;">
+                        <div class="panel" style="align-items:center;">
+                            <div class="panel" style="align-items:center;">
+                                <textarea class="form-control form-control-lg mb-3" rows="10"
+                                    placeholder="Better Things Coming Soon" style="height:300px;"></textarea>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-header " style="text-align:center;">
+                        <h4 class="card-title">We're Proud of You!!</h4>
+                        <p class="card-category"></p>
+                    </div>
+                    <div class="card-body " style="  text-align: center;">
+                        <div class="panel" style="align-items:center;">
+                            <div class="panel" style="align-items:center;">
+                                <input type="button" value="Submit" class="button btn btn-warning btn-round"
+                                    style="margin:30px 100px 20px 30px;" onclick="submitImage();" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock dashboard_content %}
+{% block scripts %}
+
+<script src="{{ url_for('static',filename='jquery.3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static',filename='popper.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap-switch.js') }}"></script>
+<script src="{{ url_for('static',filename='chartist.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap-notify.js') }}"></script>
+<script src="{{ url_for('static',filename='light-bootstrap-dashboard.js') }}"></script>
+{% endblock scripts %}

@@ -1,0 +1,81 @@
+
+{% extends "dashboard_base.html" %}
+{% block dashboard_content %}
+<div class="content" style="margin-top=100px; ">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12"></div>
+          <br><br><br>
+            <div class="col-md-1">
+              </div>
+            <div class="col-md-4">
+                <div class="card"  style="background:transparent; border: none;">
+                    <div class="card-header " style="background:transparent;">
+                        <h4 class="card-title" style="color:#933d50;text-align:center; align-content:center; font-weight:600;">Image
+                            Recognition</h4>
+                        <p class="card-category"></p>
+                    </div>
+                    <div class="card-body " style="text-align:center; align-content:center;">
+                        <div class="panel" style="text-align:center; align-content:center;" >
+                            <!--  <input id="file-upload" class="hidden" style="display:none;" type="file" accept="image/x-png,image/gif,image/jpeg" />
+                        <label for="file-upload" id="file-drag" class="upload-box">
+                          <div id="upload-caption" class="btn btn-info btn-round">Upload a Picture</div>
+                          <img id="image-preview" class="hidden" style="display:none;"/>
+                        </label>-->
+                            <input id="file-upload" class="hidden" style="display:none;" type="file"
+                                accept="image/x-png,image/gif,image/jpeg" />
+                            <label for="file-upload" id="file-drag" class="upload-box">
+                                <div id="upload-caption" class="btn btn-info btn-round"
+                                    style="height: 150px;font-size: 15px;margin: 20px;width: 300px;background: #933d50; border-color:#933d50;">
+                                    <div id="upldimg" style="margin-top:50px;">Upload an Image
+
+                                    </div>
+                                </div>
+                                <img id="image-preview" class="hidden" style="display:none;" />
+                            </label>
+                        </div>
+
+                        <input type="button" value="Submit" class="button btn btn-dark btn-round"
+                            style="margin-right:5%" onclick="submitImage();" />
+                        <input type="button" value="Clear" class="button btn btn-dark btn-round"
+                            onclick="clearImage();" />
+
+                        <!--        <input type="button" value="Submit" class="btn btn-warning btn-round" style="margin:20px 20px 20px 0px;" onclick="submitImage();" />
+                      <input type="button" value="Clear" class="btn btn-warning  btn-round"  onclick="clearImage();" />-->
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card " style="background:transparent; border: none;">
+                    <div class="card-header " style="background:transparent; border: none;text-align:center;">
+                        <h4 class="card-title" style="background:transparent; border: none;color:#933d50;text-align:center; align-content:center; font-weight:600;">Prediction: It might take a moment.</h4>
+                        <p class="card-category"></p>
+                    </div>
+                    <div class="card-body " style="background:transparent; border: none;height: 310px; text-align: center;">
+                        <div id="image-box">
+                            <img id="image-display" />
+                            <div id="pred-result" class="hidden"
+                                style="font-size: 3rem; padding: 20px 20px 20px 0px;"></div>
+                            <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
+                                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock dashboard_content %}
+{% block scripts %}
+
+<script src="{{ url_for('static',filename='jquery.3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static',filename='popper.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap-switch.js') }}"></script>
+<script src="{{ url_for('static',filename='chartist.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap-notify.js') }}"></script>
+<script src="{{ url_for('static',filename='light-bootstrap-dashboard.js') }}"></script>
+<script src="{{ url_for('static',filename='food.js') }}"></script>
+{% endblock scripts %}
